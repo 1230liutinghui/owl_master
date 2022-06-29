@@ -53,6 +53,8 @@
 </template>
 
 <script>
+import {setUserLoginInfo} from "../utils";
+
 export default {
   name: 'Main',
   data() {
@@ -78,6 +80,12 @@ export default {
               type: 'success',
               message: '注销成功!'
             })
+            this.$trtcCalling.logout();
+            this.$store.commit("userLogoutSuccess");
+            setUserLoginInfo({
+              token: "",
+              phoneNum: ""
+            });
             localStorage.removeItem('token')
             localStorage.removeItem('userName')
             localStorage.removeItem('path')
