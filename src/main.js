@@ -13,7 +13,7 @@ import axios from 'axios'
 
 Vue.use(ElementUI)
 
-axios.defaults.baseURL = 'http://localhost:8989';  // 默认地址
+axios.defaults.baseURL = 'https://119.91.99.211:8990';  // 默认地址
 Vue.prototype.$http = axios
 Vue.prototype.$message = Message;
 Vue.prototype.$confirm = MessageBox.confirm;

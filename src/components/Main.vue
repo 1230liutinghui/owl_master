@@ -117,8 +117,7 @@ export default {
       }
     })
     let path = localStorage.getItem('path')
-    if (path === null)
-      this.currentMenu = '/Main/Home'
+    this.currentMenu = path
     if (path === '/Main/recordList/recordDetail') {
       this.currentMenu = '/Main/recordList'
     }
