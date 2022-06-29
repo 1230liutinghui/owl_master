@@ -3,7 +3,7 @@
     <el-header>
       <el-col :span="4">
         <div style="text-align: left">
-          <el-image :src="require('@/assets/Group 1.png')" style="height: 1.2em;top: 0.6em;left: 0.3em"></el-image>
+          <el-image :src="require('@/assets/Group 1.png')" style="height: 1.2em;top: 0.2em;"></el-image>
         </div>
         <div style="text-align: center">
           <b class="top_left_text" style="top: 0.4em;left: 3.2em;margin: 0">猫头鹰助理</b>
@@ -109,6 +109,7 @@ export default {
                 message: '登录成功',
                 type: 'success'
               })
+              localStorage.setItem('path', '/Main/Home')
               const userSig = genTestUserSig(this.ruleForm.userName).userSig;
               const userId = this.ruleForm.userName;
               this.$store.commit("userLoginSuccess");
