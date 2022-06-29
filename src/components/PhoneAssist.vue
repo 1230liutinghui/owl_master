@@ -186,6 +186,14 @@ export default {
       if (newList !== oldList || newList.length !== oldList.length) {
         this.updateUserId2UserInfo(newList);
       }
+    },
+    'list': {
+      handler : function () {
+        this.$nextTick(function () {
+          this.scrollDown()
+        })
+      },
+      deep: true
     }
   },
   methods: {
@@ -376,6 +384,9 @@ export default {
         }
       })
     },
+    scrollDown() {
+      this.$refs['leftScrollbar'].wrap.scrollTop = this.$refs['leftScrollbar'].wrap.scrollHeight
+    }
   }
 };
 </script>
